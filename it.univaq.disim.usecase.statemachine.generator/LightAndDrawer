@@ -10,7 +10,7 @@ command: unlockedPanel., "PNUL"
 command: lookedPanel., "PNLK"
 command: unlockDoor., "D1UL"
 
-resetEvents: :panelClosed :panelClosed 
+resetEvents: :drawerOpened :lightOn 
 state :idle do
 	actions: :unlockDoor,:lookedPanel
 	transition :panelClosed => active
@@ -18,7 +18,7 @@ end
 
 state :active do
 	actions: 
-	transition :lightOn => waitingForDrawer,:drawerOpened => waitingForLight
+	transition :drawerOpened => waitingForLight,:lightOn => waitingForDrawer
 end
 
 state :waitingForDrawer do

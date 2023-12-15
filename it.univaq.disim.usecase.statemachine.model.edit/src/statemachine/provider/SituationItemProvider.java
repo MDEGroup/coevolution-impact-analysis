@@ -24,17 +24,17 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import statemachine.State;
+import statemachine.Situation;
 import statemachine.StatemachineFactory;
 import statemachine.StatemachinePackage;
 
 /**
- * This is the item provider adapter for a {@link statemachine.State} object.
+ * This is the item provider adapter for a {@link statemachine.Situation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class StateItemProvider 
+public class SituationItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -48,7 +48,7 @@ public class StateItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StateItemProvider(AdapterFactory adapterFactory) {
+	public SituationItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -79,9 +79,9 @@ public class StateItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_State_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_State_name_feature", "_UI_State_type"),
-				 StatemachinePackage.Literals.STATE__NAME,
+				 getString("_UI_Situation_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Situation_name_feature", "_UI_Situation_type"),
+				 StatemachinePackage.Literals.SITUATION__NAME,
 				 true,
 				 false,
 				 false,
@@ -102,7 +102,7 @@ public class StateItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(StatemachinePackage.Literals.STATE__ACTIONS);
+			childrenFeatures.add(StatemachinePackage.Literals.SITUATION__ACTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -121,14 +121,14 @@ public class StateItemProvider
 	}
 
 	/**
-	 * This returns State.gif.
+	 * This returns Situation.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/State"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Situation"));
 	}
 
 	/**
@@ -139,10 +139,10 @@ public class StateItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((State)object).getName();
+		String label = ((Situation)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_State_type") :
-			getString("_UI_State_type") + " " + label;
+			getString("_UI_Situation_type") :
+			getString("_UI_Situation_type") + " " + label;
 	}
 
 
@@ -157,11 +157,11 @@ public class StateItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(State.class)) {
-			case StatemachinePackage.STATE__NAME:
+		switch (notification.getFeatureID(Situation.class)) {
+			case StatemachinePackage.SITUATION__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case StatemachinePackage.STATE__ACTIONS:
+			case StatemachinePackage.SITUATION__ACTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -181,7 +181,7 @@ public class StateItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(StatemachinePackage.Literals.STATE__ACTIONS,
+				(StatemachinePackage.Literals.SITUATION__ACTIONS,
 				 StatemachineFactory.eINSTANCE.createCommand()));
 	}
 

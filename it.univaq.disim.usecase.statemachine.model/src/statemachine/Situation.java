@@ -8,36 +8,36 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>State</b></em>'.
+ * A representation of the model object '<em><b>Situation</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link statemachine.State#getName <em>Name</em>}</li>
- *   <li>{@link statemachine.State#getActions <em>Actions</em>}</li>
+ *   <li>{@link statemachine.Situation#getName <em>Name</em>}</li>
+ *   <li>{@link statemachine.Situation#getActions <em>Actions</em>}</li>
  * </ul>
  *
- * @see statemachine.StatemachinePackage#getState()
+ * @see statemachine.StatemachinePackage#getSituation()
  * @model
  * @generated
  */
-public interface State extends EObject {
+public interface Situation extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see statemachine.StatemachinePackage#getState_Name()
+	 * @see statemachine.StatemachinePackage#getSituation_Name()
 	 * @model unique="false" required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link statemachine.State#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link statemachine.Situation#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -52,10 +52,10 @@ public interface State extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actions</em>' containment reference list.
-	 * @see statemachine.StatemachinePackage#getState_Actions()
+	 * @see statemachine.StatemachinePackage#getSituation_Actions()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Command> getActions();
 
-} // State
+} // Situation

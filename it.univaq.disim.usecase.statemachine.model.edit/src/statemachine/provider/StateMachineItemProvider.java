@@ -186,7 +186,7 @@ public class StateMachineItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(StatemachinePackage.Literals.STATE_MACHINE__STATES,
-				 StatemachineFactory.eINSTANCE.createState()));
+				 StatemachineFactory.eINSTANCE.createSituation()));
 
 		newChildDescriptors.add
 			(createChildParameter

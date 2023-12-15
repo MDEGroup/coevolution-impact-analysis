@@ -64,12 +64,12 @@ public interface Reset extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transition</em>' reference.
-	 * @see #setTransition(State)
+	 * @see #setTransition(Situation)
 	 * @see statemachine.StatemachinePackage#getReset_Transition()
 	 * @model
 	 * @generated
 	 */
-	State getTransition();
+	Situation getTransition();
 
 	/**
 	 * Sets the value of the '{@link statemachine.Reset#getTransition <em>Transition</em>}' reference.
@@ -79,6 +79,6 @@ public interface Reset extends EObject {
 	 * @see #getTransition()
 	 * @generated
 	 */
-	void setTransition(State value);
+	void setTransition(Situation value);
 
 } // Reset

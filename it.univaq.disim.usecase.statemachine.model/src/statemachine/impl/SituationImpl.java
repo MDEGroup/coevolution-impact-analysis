@@ -19,24 +19,24 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import statemachine.Command;
-import statemachine.State;
+import statemachine.Situation;
 import statemachine.StatemachinePackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>State</b></em>'.
+ * An implementation of the model object '<em><b>Situation</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link statemachine.impl.StateImpl#getName <em>Name</em>}</li>
- *   <li>{@link statemachine.impl.StateImpl#getActions <em>Actions</em>}</li>
+ *   <li>{@link statemachine.impl.SituationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link statemachine.impl.SituationImpl#getActions <em>Actions</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class StateImpl extends MinimalEObjectImpl.Container implements State {
+public class SituationImpl extends MinimalEObjectImpl.Container implements Situation {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -72,7 +72,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StateImpl() {
+	protected SituationImpl() {
 		super();
 	}
 
@@ -83,7 +83,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return StatemachinePackage.Literals.STATE;
+		return StatemachinePackage.Literals.SITUATION;
 	}
 
 	/**
@@ -91,6 +91,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -100,11 +101,12 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatemachinePackage.STATE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, StatemachinePackage.SITUATION__NAME, oldName, name));
 	}
 
 	/**
@@ -112,9 +114,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Command> getActions() {
 		if (actions == null) {
-			actions = new EObjectContainmentEList<Command>(Command.class, this, StatemachinePackage.STATE__ACTIONS);
+			actions = new EObjectContainmentEList<Command>(Command.class, this, StatemachinePackage.SITUATION__ACTIONS);
 		}
 		return actions;
 	}
@@ -127,7 +130,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StatemachinePackage.STATE__ACTIONS:
+			case StatemachinePackage.SITUATION__ACTIONS:
 				return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -141,9 +144,9 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatemachinePackage.STATE__NAME:
+			case StatemachinePackage.SITUATION__NAME:
 				return getName();
-			case StatemachinePackage.STATE__ACTIONS:
+			case StatemachinePackage.SITUATION__ACTIONS:
 				return getActions();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -158,10 +161,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatemachinePackage.STATE__NAME:
+			case StatemachinePackage.SITUATION__NAME:
 				setName((String)newValue);
 				return;
-			case StatemachinePackage.STATE__ACTIONS:
+			case StatemachinePackage.SITUATION__ACTIONS:
 				getActions().clear();
 				getActions().addAll((Collection<? extends Command>)newValue);
 				return;
@@ -177,10 +180,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatemachinePackage.STATE__NAME:
+			case StatemachinePackage.SITUATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case StatemachinePackage.STATE__ACTIONS:
+			case StatemachinePackage.SITUATION__ACTIONS:
 				getActions().clear();
 				return;
 		}
@@ -195,9 +198,9 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatemachinePackage.STATE__NAME:
+			case StatemachinePackage.SITUATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case StatemachinePackage.STATE__ACTIONS:
+			case StatemachinePackage.SITUATION__ACTIONS:
 				return actions != null && !actions.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -219,4 +222,4 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 		return result.toString();
 	}
 
-} //StateImpl
+} //SituationImpl

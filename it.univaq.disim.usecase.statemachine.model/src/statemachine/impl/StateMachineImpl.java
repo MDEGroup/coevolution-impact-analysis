@@ -17,8 +17,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import statemachine.Reset;
-import statemachine.State;
+import statemachine.Situation;
 import statemachine.StateMachine;
 import statemachine.StatemachinePackage;
 import statemachine.Transition;
@@ -48,7 +49,7 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<State> states;
+	protected EList<Situation> states;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -114,9 +115,10 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<State> getStates() {
+	@Override
+	public EList<Situation> getStates() {
 		if (states == null) {
-			states = new EObjectContainmentEList<State>(State.class, this, StatemachinePackage.STATE_MACHINE__STATES);
+			states = new EObjectContainmentEList<Situation>(Situation.class, this, StatemachinePackage.STATE_MACHINE__STATES);
 		}
 		return states;
 	}
@@ -126,6 +128,7 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -135,6 +138,7 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -147,6 +151,7 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Transition> getTranstions() {
 		if (transtions == null) {
 			transtions = new EObjectContainmentEList<Transition>(Transition.class, this, StatemachinePackage.STATE_MACHINE__TRANSTIONS);
@@ -159,6 +164,7 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reset getReset() {
 		return reset;
 	}
@@ -183,6 +189,7 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReset(Reset newReset) {
 		if (newReset != reset) {
 			NotificationChain msgs = null;
@@ -246,7 +253,7 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 		switch (featureID) {
 			case StatemachinePackage.STATE_MACHINE__STATES:
 				getStates().clear();
-				getStates().addAll((Collection<? extends State>)newValue);
+				getStates().addAll((Collection<? extends Situation>)newValue);
 				return;
 			case StatemachinePackage.STATE_MACHINE__NAME:
 				setName((String)newValue);

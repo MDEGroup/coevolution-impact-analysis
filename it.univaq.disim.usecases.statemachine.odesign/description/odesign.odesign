@@ -20,7 +20,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="stateCN" semanticCandidatesExpression="feature:states" domainClass="statemachine::State" childrenPresentation="List">
+        <containerMappings name="stateCN" semanticCandidatesExpression="feature:states" domainClass="statemachine::Situation" childrenPresentation="List">
           <subNodeMappings name="commandsSN" semanticCandidatesExpression="feature:actions" domainClass="statemachine::Command">
             <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.name + ' ' + self.code" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -56,7 +56,7 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="statemachine::State" referenceName="states"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="statemachine::Situation" referenceName="states"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

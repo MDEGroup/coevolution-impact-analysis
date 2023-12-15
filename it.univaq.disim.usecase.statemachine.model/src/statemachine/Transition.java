@@ -28,12 +28,12 @@ public interface Transition extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(State)
+	 * @see #setSource(Situation)
 	 * @see statemachine.StatemachinePackage#getTransition_Source()
 	 * @model required="true"
 	 * @generated
 	 */
-	State getSource();
+	Situation getSource();
 
 	/**
 	 * Sets the value of the '{@link statemachine.Transition#getSource <em>Source</em>}' reference.
@@ -43,19 +43,19 @@ public interface Transition extends EObject {
 	 * @see #getSource()
 	 * @generated
 	 */
-	void setSource(State value);
+	void setSource(Situation value);
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
-	 * @see #setTarget(State)
+	 * @see #setTarget(Situation)
 	 * @see statemachine.StatemachinePackage#getTransition_Target()
 	 * @model required="true"
 	 * @generated
 	 */
-	State getTarget();
+	Situation getTarget();
 
 	/**
 	 * Sets the value of the '{@link statemachine.Transition#getTarget <em>Target</em>}' reference.
@@ -65,7 +65,7 @@ public interface Transition extends EObject {
 	 * @see #getTarget()
 	 * @generated
 	 */
-	void setTarget(State value);
+	void setTarget(Situation value);
 
 	/**
 	 * Returns the value of the '<em><b>Trigger</b></em>' containment reference.

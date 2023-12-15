@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/it.univaq.disim.usecase.statemachine.model/src"
     modelPluginID="it.univaq.disim.usecase.statemachine.model" modelName="Statemachine"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+    complianceLevel="19.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>statemachine.ecore</foreignModel>
   <genPackages prefix="Statemachine" disposableProviderFactory="true" ecorePackage="statemachine.ecore#/">
     <genClasses ecoreClass="statemachine.ecore#//StateMachine">
@@ -12,9 +12,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/transtions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/reset"/>
     </genClasses>
-    <genClasses ecoreClass="statemachine.ecore#//State">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//State/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//State/actions"/>
+    <genClasses ecoreClass="statemachine.ecore#//Situation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//Situation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//Situation/actions"/>
     </genClasses>
     <genClasses ecoreClass="statemachine.ecore#//Transition">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference statemachine.ecore#//Transition/source"/>

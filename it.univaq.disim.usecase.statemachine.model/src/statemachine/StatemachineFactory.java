@@ -31,13 +31,13 @@ public interface StatemachineFactory extends EFactory {
 	StateMachine createStateMachine();
 
 	/**
-	 * Returns a new object of class '<em>State</em>'.
+	 * Returns a new object of class '<em>Situation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>State</em>'.
+	 * @return a new object of class '<em>Situation</em>'.
 	 * @generated
 	 */
-	State createState();
+	Situation createSituation();
 
 	/**
 	 * Returns a new object of class '<em>Transition</em>'.

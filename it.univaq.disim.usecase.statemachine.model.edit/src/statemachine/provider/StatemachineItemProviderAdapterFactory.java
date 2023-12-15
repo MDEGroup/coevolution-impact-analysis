@@ -95,26 +95,26 @@ public class StatemachineItemProviderAdapterFactory extends StatemachineAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link statemachine.State} instances.
+	 * This keeps track of the one adapter used for all {@link statemachine.Situation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StateItemProvider stateItemProvider;
+	protected SituationItemProvider situationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link statemachine.State}.
+	 * This creates an adapter for a {@link statemachine.Situation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createStateAdapter() {
-		if (stateItemProvider == null) {
-			stateItemProvider = new StateItemProvider(this);
+	public Adapter createSituationAdapter() {
+		if (situationItemProvider == null) {
+			situationItemProvider = new SituationItemProvider(this);
 		}
 
-		return stateItemProvider;
+		return situationItemProvider;
 	}
 
 	/**
@@ -215,6 +215,7 @@ public class StatemachineItemProviderAdapterFactory extends StatemachineAdapterF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComposeableAdapterFactory getRootAdapterFactory() {
 		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
 	}
@@ -225,6 +226,7 @@ public class StatemachineItemProviderAdapterFactory extends StatemachineAdapterF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
 		this.parentAdapterFactory = parentAdapterFactory;
 	}
@@ -273,6 +275,7 @@ public class StatemachineItemProviderAdapterFactory extends StatemachineAdapterF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void addListener(INotifyChangedListener notifyChangedListener) {
 		changeNotifier.addListener(notifyChangedListener);
 	}
@@ -283,6 +286,7 @@ public class StatemachineItemProviderAdapterFactory extends StatemachineAdapterF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void removeListener(INotifyChangedListener notifyChangedListener) {
 		changeNotifier.removeListener(notifyChangedListener);
 	}
@@ -293,6 +297,7 @@ public class StatemachineItemProviderAdapterFactory extends StatemachineAdapterF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void fireNotifyChanged(Notification notification) {
 		changeNotifier.fireNotifyChanged(notification);
 
@@ -307,9 +312,10 @@ public class StatemachineItemProviderAdapterFactory extends StatemachineAdapterF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void dispose() {
 		if (stateMachineItemProvider != null) stateMachineItemProvider.dispose();
-		if (stateItemProvider != null) stateItemProvider.dispose();
+		if (situationItemProvider != null) situationItemProvider.dispose();
 		if (transitionItemProvider != null) transitionItemProvider.dispose();
 		if (commandItemProvider != null) commandItemProvider.dispose();
 		if (eventItemProvider != null) eventItemProvider.dispose();

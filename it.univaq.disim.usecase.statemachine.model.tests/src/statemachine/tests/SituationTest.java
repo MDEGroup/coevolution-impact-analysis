@@ -6,24 +6,24 @@ import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
-import statemachine.State;
+import statemachine.Situation;
 import statemachine.StatemachineFactory;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>State</b></em>'.
+ * A test case for the model object '<em><b>Situation</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class StateTest extends TestCase {
+public class SituationTest extends TestCase {
 
 	/**
-	 * The fixture for this State test case.
+	 * The fixture for this Situation test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected State fixture = null;
+	protected Situation fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,36 +31,36 @@ public class StateTest extends TestCase {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(StateTest.class);
+		TestRunner.run(SituationTest.class);
 	}
 
 	/**
-	 * Constructs a new State test case with the given name.
+	 * Constructs a new Situation test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StateTest(String name) {
+	public SituationTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Sets the fixture for this State test case.
+	 * Sets the fixture for this Situation test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void setFixture(State fixture) {
+	protected void setFixture(Situation fixture) {
 		this.fixture = fixture;
 	}
 
 	/**
-	 * Returns the fixture for this State test case.
+	 * Returns the fixture for this Situation test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected State getFixture() {
+	protected Situation getFixture() {
 		return fixture;
 	}
 
@@ -72,7 +72,7 @@ public class StateTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(StatemachineFactory.eINSTANCE.createState());
+		setFixture(StatemachineFactory.eINSTANCE.createSituation());
 	}
 
 	/**
@@ -86,4 +86,4 @@ public class StateTest extends TestCase {
 		setFixture(null);
 	}
 
-} //StateTest
+} //SituationTest

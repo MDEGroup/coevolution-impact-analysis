@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface StateMachine extends EObject {
 	/**
 	 * Returns the value of the '<em><b>States</b></em>' containment reference list.
-	 * The list contents are of type {@link statemachine.State}.
+	 * The list contents are of type {@link statemachine.Situation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>States</em>' containment reference list.
@@ -36,7 +36,7 @@ public interface StateMachine extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<State> getStates();
+	EList<Situation> getStates();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

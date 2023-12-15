@@ -57,7 +57,7 @@ public class StatemachineFactoryImpl extends EFactoryImpl implements Statemachin
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case StatemachinePackage.STATE_MACHINE: return createStateMachine();
-			case StatemachinePackage.STATE: return createState();
+			case StatemachinePackage.SITUATION: return createSituation();
 			case StatemachinePackage.TRANSITION: return createTransition();
 			case StatemachinePackage.COMMAND: return createCommand();
 			case StatemachinePackage.EVENT: return createEvent();
@@ -72,6 +72,7 @@ public class StatemachineFactoryImpl extends EFactoryImpl implements Statemachin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateMachine createStateMachine() {
 		StateMachineImpl stateMachine = new StateMachineImpl();
 		return stateMachine;
@@ -82,9 +83,10 @@ public class StatemachineFactoryImpl extends EFactoryImpl implements Statemachin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State createState() {
-		StateImpl state = new StateImpl();
-		return state;
+	@Override
+	public Situation createSituation() {
+		SituationImpl situation = new SituationImpl();
+		return situation;
 	}
 
 	/**
@@ -92,6 +94,7 @@ public class StatemachineFactoryImpl extends EFactoryImpl implements Statemachin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition createTransition() {
 		TransitionImpl transition = new TransitionImpl();
 		return transition;
@@ -102,6 +105,7 @@ public class StatemachineFactoryImpl extends EFactoryImpl implements Statemachin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Command createCommand() {
 		CommandImpl command = new CommandImpl();
 		return command;
@@ -112,6 +116,7 @@ public class StatemachineFactoryImpl extends EFactoryImpl implements Statemachin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Event createEvent() {
 		EventImpl event = new EventImpl();
 		return event;
@@ -122,6 +127,7 @@ public class StatemachineFactoryImpl extends EFactoryImpl implements Statemachin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reset createReset() {
 		ResetImpl reset = new ResetImpl();
 		return reset;
@@ -132,6 +138,7 @@ public class StatemachineFactoryImpl extends EFactoryImpl implements Statemachin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StatemachinePackage getStatemachinePackage() {
 		return (StatemachinePackage)getEPackage();
 	}

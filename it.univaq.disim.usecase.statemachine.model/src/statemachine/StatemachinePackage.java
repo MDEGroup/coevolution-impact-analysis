@@ -121,14 +121,14 @@ public interface StatemachinePackage extends EPackage {
 	int STATE_MACHINE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link statemachine.impl.StateImpl <em>State</em>}' class.
+	 * The meta object id for the '{@link statemachine.impl.SituationImpl <em>Situation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see statemachine.impl.StateImpl
-	 * @see statemachine.impl.StatemachinePackageImpl#getState()
+	 * @see statemachine.impl.SituationImpl
+	 * @see statemachine.impl.StatemachinePackageImpl#getSituation()
 	 * @generated
 	 */
-	int STATE = 1;
+	int SITUATION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -137,7 +137,7 @@ public interface StatemachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__NAME = 0;
+	int SITUATION__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -146,25 +146,25 @@ public interface StatemachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__ACTIONS = 1;
+	int SITUATION__ACTIONS = 1;
 
 	/**
-	 * The number of structural features of the '<em>State</em>' class.
+	 * The number of structural features of the '<em>Situation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_FEATURE_COUNT = 2;
+	int SITUATION_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>State</em>' class.
+	 * The number of operations of the '<em>Situation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_OPERATION_COUNT = 0;
+	int SITUATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link statemachine.impl.TransitionImpl <em>Transition</em>}' class.
@@ -359,7 +359,6 @@ public interface StatemachinePackage extends EPackage {
 	 */
 	int EVENT_OPERATION_COUNT = ABSTRACT_EVENT_OPERATION_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link statemachine.impl.ResetImpl <em>Reset</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -471,36 +470,36 @@ public interface StatemachinePackage extends EPackage {
 	EReference getStateMachine_Reset();
 
 	/**
-	 * Returns the meta object for class '{@link statemachine.State <em>State</em>}'.
+	 * Returns the meta object for class '{@link statemachine.Situation <em>Situation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>State</em>'.
-	 * @see statemachine.State
+	 * @return the meta object for class '<em>Situation</em>'.
+	 * @see statemachine.Situation
 	 * @generated
 	 */
-	EClass getState();
+	EClass getSituation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link statemachine.State#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link statemachine.Situation#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see statemachine.State#getName()
-	 * @see #getState()
+	 * @see statemachine.Situation#getName()
+	 * @see #getSituation()
 	 * @generated
 	 */
-	EAttribute getState_Name();
+	EAttribute getSituation_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link statemachine.State#getActions <em>Actions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link statemachine.Situation#getActions <em>Actions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Actions</em>'.
-	 * @see statemachine.State#getActions()
-	 * @see #getState()
+	 * @see statemachine.Situation#getActions()
+	 * @see #getSituation()
 	 * @generated
 	 */
-	EReference getState_Actions();
+	EReference getSituation_Actions();
 
 	/**
 	 * Returns the meta object for class '{@link statemachine.Transition <em>Transition</em>}'.
@@ -706,14 +705,14 @@ public interface StatemachinePackage extends EPackage {
 		EReference STATE_MACHINE__RESET = eINSTANCE.getStateMachine_Reset();
 
 		/**
-		 * The meta object literal for the '{@link statemachine.impl.StateImpl <em>State</em>}' class.
+		 * The meta object literal for the '{@link statemachine.impl.SituationImpl <em>Situation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see statemachine.impl.StateImpl
-		 * @see statemachine.impl.StatemachinePackageImpl#getState()
+		 * @see statemachine.impl.SituationImpl
+		 * @see statemachine.impl.StatemachinePackageImpl#getSituation()
 		 * @generated
 		 */
-		EClass STATE = eINSTANCE.getState();
+		EClass SITUATION = eINSTANCE.getSituation();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -721,7 +720,7 @@ public interface StatemachinePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STATE__NAME = eINSTANCE.getState_Name();
+		EAttribute SITUATION__NAME = eINSTANCE.getSituation_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
@@ -729,7 +728,7 @@ public interface StatemachinePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__ACTIONS = eINSTANCE.getState_Actions();
+		EReference SITUATION__ACTIONS = eINSTANCE.getSituation_Actions();
 
 		/**
 		 * The meta object literal for the '{@link statemachine.impl.TransitionImpl <em>Transition</em>}' class.

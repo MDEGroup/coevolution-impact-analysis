@@ -72,8 +72,8 @@ public class StatemachineAdapterFactory extends AdapterFactoryImpl {
 				return createStateMachineAdapter();
 			}
 			@Override
-			public Adapter caseState(State object) {
-				return createStateAdapter();
+			public Adapter caseSituation(Situation object) {
+				return createSituationAdapter();
 			}
 			@Override
 			public Adapter caseTransition(Transition object) {
@@ -130,16 +130,16 @@ public class StatemachineAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link statemachine.State <em>State</em>}'.
+	 * Creates a new adapter for an object of class '{@link statemachine.Situation <em>Situation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see statemachine.State
+	 * @see statemachine.Situation
 	 * @generated
 	 */
-	public Adapter createStateAdapter() {
+	public Adapter createSituationAdapter() {
 		return null;
 	}
 

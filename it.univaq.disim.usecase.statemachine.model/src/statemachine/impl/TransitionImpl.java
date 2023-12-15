@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import statemachine.Event;
-import statemachine.State;
+import statemachine.Situation;
 import statemachine.StatemachinePackage;
 import statemachine.Transition;
 
@@ -40,7 +40,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * @generated
 	 * @ordered
 	 */
-	protected State source;
+	protected Situation source;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
@@ -50,7 +50,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * @generated
 	 * @ordered
 	 */
-	protected State target;
+	protected Situation target;
 
 	/**
 	 * The cached value of the '{@link #getTrigger() <em>Trigger</em>}' containment reference.
@@ -86,10 +86,11 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State getSource() {
+	@Override
+	public Situation getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
-			source = (State)eResolveProxy(oldSource);
+			source = (Situation)eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatemachinePackage.TRANSITION__SOURCE, oldSource, source));
@@ -103,7 +104,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State basicGetSource() {
+	public Situation basicGetSource() {
 		return source;
 	}
 
@@ -112,8 +113,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSource(State newSource) {
-		State oldSource = source;
+	@Override
+	public void setSource(Situation newSource) {
+		Situation oldSource = source;
 		source = newSource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StatemachinePackage.TRANSITION__SOURCE, oldSource, source));
@@ -124,10 +126,11 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State getTarget() {
+	@Override
+	public Situation getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
-			target = (State)eResolveProxy(oldTarget);
+			target = (Situation)eResolveProxy(oldTarget);
 			if (target != oldTarget) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatemachinePackage.TRANSITION__TARGET, oldTarget, target));
@@ -141,7 +144,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State basicGetTarget() {
+	public Situation basicGetTarget() {
 		return target;
 	}
 
@@ -150,8 +153,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTarget(State newTarget) {
-		State oldTarget = target;
+	@Override
+	public void setTarget(Situation newTarget) {
+		Situation oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StatemachinePackage.TRANSITION__TARGET, oldTarget, target));
@@ -162,6 +166,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Event getTrigger() {
 		return trigger;
 	}
@@ -186,6 +191,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTrigger(Event newTrigger) {
 		if (newTrigger != trigger) {
 			NotificationChain msgs = null;
@@ -243,10 +249,10 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case StatemachinePackage.TRANSITION__SOURCE:
-				setSource((State)newValue);
+				setSource((Situation)newValue);
 				return;
 			case StatemachinePackage.TRANSITION__TARGET:
-				setTarget((State)newValue);
+				setTarget((Situation)newValue);
 				return;
 			case StatemachinePackage.TRANSITION__TRIGGER:
 				setTrigger((Event)newValue);
@@ -264,10 +270,10 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case StatemachinePackage.TRANSITION__SOURCE:
-				setSource((State)null);
+				setSource((Situation)null);
 				return;
 			case StatemachinePackage.TRANSITION__TARGET:
-				setTarget((State)null);
+				setTarget((Situation)null);
 				return;
 			case StatemachinePackage.TRANSITION__TRIGGER:
 				setTrigger((Event)null);
