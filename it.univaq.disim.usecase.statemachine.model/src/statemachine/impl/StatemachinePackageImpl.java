@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import statemachine.AbstractEvent;
 import statemachine.Command;
 import statemachine.Event;
+import statemachine.Reset;
 import statemachine.State;
 import statemachine.StateMachine;
 import statemachine.StatemachineFactory;
@@ -66,6 +67,13 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 	 * @generated
 	 */
 	private EClass eventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass resetEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -162,6 +170,15 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 	 */
 	public EReference getStateMachine_Transtions() {
 		return (EReference)stateMachineEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStateMachine_Reset() {
+		return (EReference)stateMachineEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -277,6 +294,33 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getReset() {
+		return resetEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getReset_Name() {
+		return (EAttribute)resetEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getReset_Events() {
+		return (EReference)resetEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public StatemachineFactory getStatemachineFactory() {
 		return (StatemachineFactory)getEFactoryInstance();
 	}
@@ -304,6 +348,7 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 		createEReference(stateMachineEClass, STATE_MACHINE__STATES);
 		createEAttribute(stateMachineEClass, STATE_MACHINE__NAME);
 		createEReference(stateMachineEClass, STATE_MACHINE__TRANSTIONS);
+		createEReference(stateMachineEClass, STATE_MACHINE__RESET);
 
 		stateEClass = createEClass(STATE);
 		createEAttribute(stateEClass, STATE__NAME);
@@ -321,6 +366,10 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 		commandEClass = createEClass(COMMAND);
 
 		eventEClass = createEClass(EVENT);
+
+		resetEClass = createEClass(RESET);
+		createEAttribute(resetEClass, RESET__NAME);
+		createEReference(resetEClass, RESET__EVENTS);
 	}
 
 	/**
@@ -359,6 +408,7 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 		initEReference(getStateMachine_States(), this.getState(), null, "states", null, 0, -1, StateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStateMachine_Name(), ecorePackage.getEString(), "name", null, 0, 1, StateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStateMachine_Transtions(), this.getTransition(), null, "transtions", null, 0, -1, StateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStateMachine_Reset(), this.getReset(), null, "reset", null, 0, -1, StateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 1, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -376,6 +426,10 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 		initEClass(commandEClass, Command.class, "Command", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(resetEClass, Reset.class, "Reset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getReset_Name(), ecorePackage.getEString(), "name", null, 0, 1, Reset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReset_Events(), this.getEvent(), null, "events", null, 0, -1, Reset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

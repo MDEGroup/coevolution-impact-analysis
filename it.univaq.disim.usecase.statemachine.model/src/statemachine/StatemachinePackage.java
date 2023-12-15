@@ -94,13 +94,22 @@ public interface StatemachinePackage extends EPackage {
 	int STATE_MACHINE__TRANSTIONS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Reset</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_MACHINE__RESET = 3;
+
+	/**
 	 * The number of structural features of the '<em>State Machine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_MACHINE_FEATURE_COUNT = 3;
+	int STATE_MACHINE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>State Machine</em>' class.
@@ -352,6 +361,53 @@ public interface StatemachinePackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link statemachine.impl.ResetImpl <em>Reset</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see statemachine.impl.ResetImpl
+	 * @see statemachine.impl.StatemachinePackageImpl#getReset()
+	 * @generated
+	 */
+	int RESET = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Events</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET__EVENTS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Reset</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Reset</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link statemachine.StateMachine <em>State Machine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -393,6 +449,17 @@ public interface StatemachinePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getStateMachine_Transtions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link statemachine.StateMachine#getReset <em>Reset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Reset</em>'.
+	 * @see statemachine.StateMachine#getReset()
+	 * @see #getStateMachine()
+	 * @generated
+	 */
+	EReference getStateMachine_Reset();
 
 	/**
 	 * Returns the meta object for class '{@link statemachine.State <em>State</em>}'.
@@ -522,6 +589,38 @@ public interface StatemachinePackage extends EPackage {
 	EClass getEvent();
 
 	/**
+	 * Returns the meta object for class '{@link statemachine.Reset <em>Reset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Reset</em>'.
+	 * @see statemachine.Reset
+	 * @generated
+	 */
+	EClass getReset();
+
+	/**
+	 * Returns the meta object for the attribute '{@link statemachine.Reset#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see statemachine.Reset#getName()
+	 * @see #getReset()
+	 * @generated
+	 */
+	EAttribute getReset_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link statemachine.Reset#getEvents <em>Events</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Events</em>'.
+	 * @see statemachine.Reset#getEvents()
+	 * @see #getReset()
+	 * @generated
+	 */
+	EReference getReset_Events();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -577,6 +676,14 @@ public interface StatemachinePackage extends EPackage {
 		 * @generated
 		 */
 		EReference STATE_MACHINE__TRANSTIONS = eINSTANCE.getStateMachine_Transtions();
+
+		/**
+		 * The meta object literal for the '<em><b>Reset</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE_MACHINE__RESET = eINSTANCE.getStateMachine_Reset();
 
 		/**
 		 * The meta object literal for the '{@link statemachine.impl.StateImpl <em>State</em>}' class.
@@ -683,6 +790,32 @@ public interface StatemachinePackage extends EPackage {
 		 * @generated
 		 */
 		EClass EVENT = eINSTANCE.getEvent();
+
+		/**
+		 * The meta object literal for the '{@link statemachine.impl.ResetImpl <em>Reset</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see statemachine.impl.ResetImpl
+		 * @see statemachine.impl.StatemachinePackageImpl#getReset()
+		 * @generated
+		 */
+		EClass RESET = eINSTANCE.getReset();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RESET__NAME = eINSTANCE.getReset_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Events</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESET__EVENTS = eINSTANCE.getReset_Events();
 
 	}
 

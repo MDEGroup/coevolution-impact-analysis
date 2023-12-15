@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link statemachine.StateMachine#getStates <em>States</em>}</li>
  *   <li>{@link statemachine.StateMachine#getName <em>Name</em>}</li>
  *   <li>{@link statemachine.StateMachine#getTranstions <em>Transtions</em>}</li>
+ *   <li>{@link statemachine.StateMachine#getReset <em>Reset</em>}</li>
  * </ul>
  *
  * @see statemachine.StatemachinePackage#getStateMachine()
@@ -70,5 +71,17 @@ public interface StateMachine extends EObject {
 	 * @generated
 	 */
 	EList<Transition> getTranstions();
+
+	/**
+	 * Returns the value of the '<em><b>Reset</b></em>' containment reference list.
+	 * The list contents are of type {@link statemachine.Reset}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reset</em>' containment reference list.
+	 * @see statemachine.StatemachinePackage#getStateMachine_Reset()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Reset> getReset();
 
 } // StateMachine

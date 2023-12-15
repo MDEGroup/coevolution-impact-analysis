@@ -1,15 +1,17 @@
-event: panelClosed., "PNCL"
-event: lightOn., "L1ON"
 event: drawreOpened., "D2OP"
 event: lightOn., "L1ON"
-event: panelClosed., ""
 event: drawerOpened., "D2OP"
+event: panelClosed., ""
+event: lightOn., "L1ON"
+event: panelClosed., "PNCL"
 
-command: unlockDoor., "D1UL"
-command: lookedPanel., "PNLK"
 command: lockDoor., "D1LK"
 command: unlockedPanel., "PNUL"
+command: lookedPanel., "PNLK"
+command: unlockDoor., "D1UL"
 
+resetEvents: :drawerOpened :drawreOpened 
+resetEvents: :panelClosed :panelClosed 
 state :idle do
 	actions: :unlockDoor,:lookedPanel
 	transition :panelClosed => active
@@ -17,7 +19,7 @@ end
 
 state :active do
 	actions: 
-	transition :drawerOpened => waitingForLight,:lightOn => waitingForDrawer
+	transition :lightOn => waitingForDrawer,:drawerOpened => waitingForLight
 end
 
 state :waitingForDrawer do

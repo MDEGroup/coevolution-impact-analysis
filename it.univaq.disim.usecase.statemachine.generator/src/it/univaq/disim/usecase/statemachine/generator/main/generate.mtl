@@ -13,6 +13,9 @@ event: [it.name/]., "[it.code/]"
 command: [it.name/]., "[it.code/]"
 [/for]
 
+[for (it : Reset | aStateMachine.reset)]
+resetEvents: [for (command : Event | it.events)]:[command.name/] [/for]
+[/for]
 [for (it : State | aStateMachine.states)]
 state :[it.name/] do
 	actions: [for (action : Command | it.actions) separator (',')]:[action.name/][/for]

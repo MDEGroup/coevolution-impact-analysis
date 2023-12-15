@@ -187,6 +187,29 @@ public class StatemachineItemProviderAdapterFactory extends StatemachineAdapterF
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link statemachine.Reset} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResetItemProvider resetItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link statemachine.Reset}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResetAdapter() {
+		if (resetItemProvider == null) {
+			resetItemProvider = new ResetItemProvider(this);
+		}
+
+		return resetItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -290,6 +313,7 @@ public class StatemachineItemProviderAdapterFactory extends StatemachineAdapterF
 		if (transitionItemProvider != null) transitionItemProvider.dispose();
 		if (commandItemProvider != null) commandItemProvider.dispose();
 		if (eventItemProvider != null) eventItemProvider.dispose();
+		if (resetItemProvider != null) resetItemProvider.dispose();
 	}
 
 }

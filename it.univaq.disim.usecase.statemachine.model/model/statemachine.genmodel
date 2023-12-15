@@ -10,6 +10,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/states"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//StateMachine/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/transtions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/reset"/>
     </genClasses>
     <genClasses ecoreClass="statemachine.ecore#//State">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//State/name"/>
@@ -26,5 +27,9 @@
     </genClasses>
     <genClasses ecoreClass="statemachine.ecore#//Command"/>
     <genClasses ecoreClass="statemachine.ecore#//Event"/>
+    <genClasses ecoreClass="statemachine.ecore#//Reset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//Reset/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference statemachine.ecore#//Reset/events"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

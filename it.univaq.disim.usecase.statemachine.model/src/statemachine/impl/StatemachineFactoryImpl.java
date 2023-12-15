@@ -61,6 +61,7 @@ public class StatemachineFactoryImpl extends EFactoryImpl implements Statemachin
 			case StatemachinePackage.TRANSITION: return createTransition();
 			case StatemachinePackage.COMMAND: return createCommand();
 			case StatemachinePackage.EVENT: return createEvent();
+			case StatemachinePackage.RESET: return createReset();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -114,6 +115,16 @@ public class StatemachineFactoryImpl extends EFactoryImpl implements Statemachin
 	public Event createEvent() {
 		EventImpl event = new EventImpl();
 		return event;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Reset createReset() {
+		ResetImpl reset = new ResetImpl();
+		return reset;
 	}
 
 	/**

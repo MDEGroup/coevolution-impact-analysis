@@ -11,8 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -24,17 +22,16 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import statemachine.StateMachine;
-import statemachine.StatemachineFactory;
+import statemachine.Reset;
 import statemachine.StatemachinePackage;
 
 /**
- * This is the item provider adapter for a {@link statemachine.StateMachine} object.
+ * This is the item provider adapter for a {@link statemachine.Reset} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class StateMachineItemProvider 
+public class ResetItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -48,7 +45,7 @@ public class StateMachineItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StateMachineItemProvider(AdapterFactory adapterFactory) {
+	public ResetItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -64,6 +61,7 @@ public class StateMachineItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addEventsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -79,9 +77,9 @@ public class StateMachineItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_StateMachine_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_StateMachine_name_feature", "_UI_StateMachine_type"),
-				 StatemachinePackage.Literals.STATE_MACHINE__NAME,
+				 getString("_UI_Reset_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Reset_name_feature", "_UI_Reset_type"),
+				 StatemachinePackage.Literals.RESET__NAME,
 				 true,
 				 false,
 				 false,
@@ -91,46 +89,36 @@ public class StateMachineItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Events feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(StatemachinePackage.Literals.STATE_MACHINE__STATES);
-			childrenFeatures.add(StatemachinePackage.Literals.STATE_MACHINE__TRANSTIONS);
-			childrenFeatures.add(StatemachinePackage.Literals.STATE_MACHINE__RESET);
-		}
-		return childrenFeatures;
+	protected void addEventsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Reset_events_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Reset_events_feature", "_UI_Reset_type"),
+				 StatemachinePackage.Literals.RESET__EVENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns StateMachine.gif.
+	 * This returns Reset.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/StateMachine"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Reset"));
 	}
 
 	/**
@@ -141,10 +129,10 @@ public class StateMachineItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((StateMachine)object).getName();
+		String label = ((Reset)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_StateMachine_type") :
-			getString("_UI_StateMachine_type") + " " + label;
+			getString("_UI_Reset_type") :
+			getString("_UI_Reset_type") + " " + label;
 	}
 
 
@@ -159,14 +147,9 @@ public class StateMachineItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(StateMachine.class)) {
-			case StatemachinePackage.STATE_MACHINE__NAME:
+		switch (notification.getFeatureID(Reset.class)) {
+			case StatemachinePackage.RESET__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case StatemachinePackage.STATE_MACHINE__STATES:
-			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
-			case StatemachinePackage.STATE_MACHINE__RESET:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -182,21 +165,6 @@ public class StateMachineItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(StatemachinePackage.Literals.STATE_MACHINE__STATES,
-				 StatemachineFactory.eINSTANCE.createState()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(StatemachinePackage.Literals.STATE_MACHINE__TRANSTIONS,
-				 StatemachineFactory.eINSTANCE.createTransition()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(StatemachinePackage.Literals.STATE_MACHINE__RESET,
-				 StatemachineFactory.eINSTANCE.createReset()));
 	}
 
 	/**
