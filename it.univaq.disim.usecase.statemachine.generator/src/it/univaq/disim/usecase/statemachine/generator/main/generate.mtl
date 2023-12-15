@@ -1,0 +1,25 @@
+[comment encoding = UTF-8 /]
+[module generate('http://it.univaq.disim.sirius.usecases/statemachine')]
+
+
+[template public generateElement(aStateMachine : StateMachine)]
+[comment @main/]
+[file (aStateMachine.name, false, 'UTF-8')]
+[for (it : Event | Event.allInstances() )]
+event: [it.name/]., "[it.code/]"
+[/for]
+
+[for (it : Command | Command.allInstances() )]
+command: [it.name/]., "[it.code/]"
+[/for]
+
+[for (it : State | aStateMachine.states)]
+state :[it.name/] do
+	actions: [for (action : Command | it.actions) separator (',')]:[action.name/][/for]
+	transition [for (action : Transition | Transition.allInstances()->select(x | x.source = self)) separator (',')]:[action.trigger.name/] => [action.target.name/][/for]
+end
+
+[/for]
+
+[/file]
+[/template]
