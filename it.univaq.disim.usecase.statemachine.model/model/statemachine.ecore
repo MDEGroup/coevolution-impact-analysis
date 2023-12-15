@@ -8,8 +8,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transtions" upperBound="-1"
         eType="#//Transition" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reset" upperBound="-1"
-        eType="#//Reset" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reset" eType="#//Reset"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
@@ -35,5 +35,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="events" upperBound="-1"
         eType="#//Event"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transition" eType="#//State"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -10,6 +10,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -17,6 +18,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import statemachine.Event;
 import statemachine.Reset;
+import statemachine.State;
 import statemachine.StatemachinePackage;
 
 /**
@@ -29,6 +31,7 @@ import statemachine.StatemachinePackage;
  * <ul>
  *   <li>{@link statemachine.impl.ResetImpl#getName <em>Name</em>}</li>
  *   <li>{@link statemachine.impl.ResetImpl#getEvents <em>Events</em>}</li>
+ *   <li>{@link statemachine.impl.ResetImpl#getTransition <em>Transition</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,6 +66,16 @@ public class ResetImpl extends MinimalEObjectImpl.Container implements Reset {
 	 * @ordered
 	 */
 	protected EList<Event> events;
+
+	/**
+	 * The cached value of the '{@link #getTransition() <em>Transition</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTransition()
+	 * @generated
+	 * @ordered
+	 */
+	protected State transition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,6 +134,44 @@ public class ResetImpl extends MinimalEObjectImpl.Container implements Reset {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public State getTransition() {
+		if (transition != null && transition.eIsProxy()) {
+			InternalEObject oldTransition = (InternalEObject)transition;
+			transition = (State)eResolveProxy(oldTransition);
+			if (transition != oldTransition) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatemachinePackage.RESET__TRANSITION, oldTransition, transition));
+			}
+		}
+		return transition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public State basicGetTransition() {
+		return transition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTransition(State newTransition) {
+		State oldTransition = transition;
+		transition = newTransition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StatemachinePackage.RESET__TRANSITION, oldTransition, transition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -128,6 +179,9 @@ public class ResetImpl extends MinimalEObjectImpl.Container implements Reset {
 				return getName();
 			case StatemachinePackage.RESET__EVENTS:
 				return getEvents();
+			case StatemachinePackage.RESET__TRANSITION:
+				if (resolve) return getTransition();
+				return basicGetTransition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -148,6 +202,9 @@ public class ResetImpl extends MinimalEObjectImpl.Container implements Reset {
 				getEvents().clear();
 				getEvents().addAll((Collection<? extends Event>)newValue);
 				return;
+			case StatemachinePackage.RESET__TRANSITION:
+				setTransition((State)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -166,6 +223,9 @@ public class ResetImpl extends MinimalEObjectImpl.Container implements Reset {
 			case StatemachinePackage.RESET__EVENTS:
 				getEvents().clear();
 				return;
+			case StatemachinePackage.RESET__TRANSITION:
+				setTransition((State)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -182,6 +242,8 @@ public class ResetImpl extends MinimalEObjectImpl.Container implements Reset {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case StatemachinePackage.RESET__EVENTS:
 				return events != null && !events.isEmpty();
+			case StatemachinePackage.RESET__TRANSITION:
+				return transition != null;
 		}
 		return super.eIsSet(featureID);
 	}

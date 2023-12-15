@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link statemachine.Reset#getName <em>Name</em>}</li>
  *   <li>{@link statemachine.Reset#getEvents <em>Events</em>}</li>
+ *   <li>{@link statemachine.Reset#getTransition <em>Transition</em>}</li>
  * </ul>
  *
  * @see statemachine.StatemachinePackage#getReset()
@@ -57,5 +58,27 @@ public interface Reset extends EObject {
 	 * @generated
 	 */
 	EList<Event> getEvents();
+
+	/**
+	 * Returns the value of the '<em><b>Transition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Transition</em>' reference.
+	 * @see #setTransition(State)
+	 * @see statemachine.StatemachinePackage#getReset_Transition()
+	 * @model
+	 * @generated
+	 */
+	State getTransition();
+
+	/**
+	 * Sets the value of the '{@link statemachine.Reset#getTransition <em>Transition</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Transition</em>' reference.
+	 * @see #getTransition()
+	 * @generated
+	 */
+	void setTransition(State value);
 
 } // Reset

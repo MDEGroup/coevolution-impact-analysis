@@ -73,15 +73,25 @@ public interface StateMachine extends EObject {
 	EList<Transition> getTranstions();
 
 	/**
-	 * Returns the value of the '<em><b>Reset</b></em>' containment reference list.
-	 * The list contents are of type {@link statemachine.Reset}.
+	 * Returns the value of the '<em><b>Reset</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reset</em>' containment reference list.
+	 * @return the value of the '<em>Reset</em>' containment reference.
+	 * @see #setReset(Reset)
 	 * @see statemachine.StatemachinePackage#getStateMachine_Reset()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Reset> getReset();
+	Reset getReset();
+
+	/**
+	 * Sets the value of the '{@link statemachine.StateMachine#getReset <em>Reset</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reset</em>' containment reference.
+	 * @see #getReset()
+	 * @generated
+	 */
+	void setReset(Reset value);
 
 } // StateMachine

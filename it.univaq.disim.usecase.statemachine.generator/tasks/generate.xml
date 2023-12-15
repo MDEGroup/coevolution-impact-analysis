@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="it.univaq.disim.usecase.statemachine.generator">
     <property name="ECLIPSE_HOME" value="../../../../eclipse/modeling-2023-09/Eclipse.app/Contents/Eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../runtime-EclipseApplication"/>
+    <property name="ECLIPSE_WORKSPACE" value="../.."/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="it.univaq.disim.usecase.statemachine.generator.libraryclasspath">

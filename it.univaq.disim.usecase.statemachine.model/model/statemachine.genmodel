@@ -30,6 +30,7 @@
     <genClasses ecoreClass="statemachine.ecore#//Reset">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//Reset/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference statemachine.ecore#//Reset/events"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference statemachine.ecore#//Reset/transition"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

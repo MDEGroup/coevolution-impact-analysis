@@ -81,14 +81,14 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	protected EList<Transition> transtions;
 
 	/**
-	 * The cached value of the '{@link #getReset() <em>Reset</em>}' containment reference list.
+	 * The cached value of the '{@link #getReset() <em>Reset</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getReset()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Reset> reset;
+	protected Reset reset;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,11 +159,42 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Reset> getReset() {
-		if (reset == null) {
-			reset = new EObjectContainmentEList<Reset>(Reset.class, this, StatemachinePackage.STATE_MACHINE__RESET);
-		}
+	public Reset getReset() {
 		return reset;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetReset(Reset newReset, NotificationChain msgs) {
+		Reset oldReset = reset;
+		reset = newReset;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StatemachinePackage.STATE_MACHINE__RESET, oldReset, newReset);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReset(Reset newReset) {
+		if (newReset != reset) {
+			NotificationChain msgs = null;
+			if (reset != null)
+				msgs = ((InternalEObject)reset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - StatemachinePackage.STATE_MACHINE__RESET, null, msgs);
+			if (newReset != null)
+				msgs = ((InternalEObject)newReset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - StatemachinePackage.STATE_MACHINE__RESET, null, msgs);
+			msgs = basicSetReset(newReset, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StatemachinePackage.STATE_MACHINE__RESET, newReset, newReset));
 	}
 
 	/**
@@ -179,7 +210,7 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
 				return ((InternalEList<?>)getTranstions()).basicRemove(otherEnd, msgs);
 			case StatemachinePackage.STATE_MACHINE__RESET:
-				return ((InternalEList<?>)getReset()).basicRemove(otherEnd, msgs);
+				return basicSetReset(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -225,8 +256,7 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 				getTranstions().addAll((Collection<? extends Transition>)newValue);
 				return;
 			case StatemachinePackage.STATE_MACHINE__RESET:
-				getReset().clear();
-				getReset().addAll((Collection<? extends Reset>)newValue);
+				setReset((Reset)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -250,7 +280,7 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 				getTranstions().clear();
 				return;
 			case StatemachinePackage.STATE_MACHINE__RESET:
-				getReset().clear();
+				setReset((Reset)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -271,7 +301,7 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
 				return transtions != null && !transtions.isEmpty();
 			case StatemachinePackage.STATE_MACHINE__RESET:
-				return reset != null && !reset.isEmpty();
+				return reset != null;
 		}
 		return super.eIsSet(featureID);
 	}

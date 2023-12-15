@@ -1,16 +1,15 @@
-event: drawreOpened., "D2OP"
-event: lightOn., "L1ON"
-event: drawerOpened., "D2OP"
-event: panelClosed., ""
 event: lightOn., "L1ON"
 event: panelClosed., "PNCL"
+event: lightOn., "L1ON"
+event: drawreOpened., "D2OP"
+event: drawerOpened., "D2OP"
+event: panelClosed., ""
 
 command: lockDoor., "D1LK"
 command: unlockedPanel., "PNUL"
 command: lookedPanel., "PNLK"
 command: unlockDoor., "D1UL"
 
-resetEvents: :drawerOpened :drawreOpened 
 resetEvents: :panelClosed :panelClosed 
 state :idle do
 	actions: :unlockDoor,:lookedPanel

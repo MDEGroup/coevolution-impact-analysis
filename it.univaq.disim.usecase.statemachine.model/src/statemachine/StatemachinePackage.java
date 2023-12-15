@@ -94,7 +94,7 @@ public interface StatemachinePackage extends EPackage {
 	int STATE_MACHINE__TRANSTIONS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Reset</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Reset</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -389,13 +389,22 @@ public interface StatemachinePackage extends EPackage {
 	int RESET__EVENTS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Transition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET__TRANSITION = 2;
+
+	/**
 	 * The number of structural features of the '<em>Reset</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESET_FEATURE_COUNT = 2;
+	int RESET_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Reset</em>' class.
@@ -451,10 +460,10 @@ public interface StatemachinePackage extends EPackage {
 	EReference getStateMachine_Transtions();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link statemachine.StateMachine#getReset <em>Reset</em>}'.
+	 * Returns the meta object for the containment reference '{@link statemachine.StateMachine#getReset <em>Reset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Reset</em>'.
+	 * @return the meta object for the containment reference '<em>Reset</em>'.
 	 * @see statemachine.StateMachine#getReset()
 	 * @see #getStateMachine()
 	 * @generated
@@ -621,6 +630,17 @@ public interface StatemachinePackage extends EPackage {
 	EReference getReset_Events();
 
 	/**
+	 * Returns the meta object for the reference '{@link statemachine.Reset#getTransition <em>Transition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Transition</em>'.
+	 * @see statemachine.Reset#getTransition()
+	 * @see #getReset()
+	 * @generated
+	 */
+	EReference getReset_Transition();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -678,7 +698,7 @@ public interface StatemachinePackage extends EPackage {
 		EReference STATE_MACHINE__TRANSTIONS = eINSTANCE.getStateMachine_Transtions();
 
 		/**
-		 * The meta object literal for the '<em><b>Reset</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Reset</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -816,6 +836,14 @@ public interface StatemachinePackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESET__EVENTS = eINSTANCE.getReset_Events();
+
+		/**
+		 * The meta object literal for the '<em><b>Transition</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESET__TRANSITION = eINSTANCE.getReset_Transition();
 
 	}
 

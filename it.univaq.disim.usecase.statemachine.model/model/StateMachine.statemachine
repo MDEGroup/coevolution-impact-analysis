@@ -30,5 +30,4 @@
     <trigger name="panelClosed"/>
   </transtions>
   <reset name="reset1" events="//@transtions.2/@trigger //@transtions.4/@trigger"/>
-  <reset name="reset2" events="//@transtions.5/@trigger //@transtions.0/@trigger"/>
 </sm:StateMachine>
