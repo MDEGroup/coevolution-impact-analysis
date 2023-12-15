@@ -29,5 +29,5 @@
   <transtions source="//@states.4" target="//@states.0">
     <trigger name="panelClosed"/>
   </transtions>
-  <reset name="reset1" events="//@transtions.2/@trigger //@transtions.4/@trigger"/>
+  <reset name="reset1" events="//@transtions.2/@trigger //@transtions.3/@trigger" transition="//@states.0"/>
 </sm:StateMachine>
