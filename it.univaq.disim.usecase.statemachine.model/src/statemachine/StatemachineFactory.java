@@ -67,15 +67,6 @@ public interface StatemachineFactory extends EFactory {
 	Event createEvent();
 
 	/**
-	 * Returns a new object of class '<em>Reset</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reset</em>'.
-	 * @generated
-	 */
-	Reset createReset();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

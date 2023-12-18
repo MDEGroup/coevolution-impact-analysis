@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import statemachine.Reset;
 import statemachine.Situation;
 import statemachine.StateMachine;
 import statemachine.StatemachinePackage;
@@ -35,7 +34,6 @@ import statemachine.Transition;
  *   <li>{@link statemachine.impl.StateMachineImpl#getStates <em>States</em>}</li>
  *   <li>{@link statemachine.impl.StateMachineImpl#getName <em>Name</em>}</li>
  *   <li>{@link statemachine.impl.StateMachineImpl#getTranstions <em>Transtions</em>}</li>
- *   <li>{@link statemachine.impl.StateMachineImpl#getReset <em>Reset</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,16 +78,6 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	 * @ordered
 	 */
 	protected EList<Transition> transtions;
-
-	/**
-	 * The cached value of the '{@link #getReset() <em>Reset</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReset()
-	 * @generated
-	 * @ordered
-	 */
-	protected Reset reset;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -165,59 +153,12 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated
 	 */
 	@Override
-	public Reset getReset() {
-		return reset;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetReset(Reset newReset, NotificationChain msgs) {
-		Reset oldReset = reset;
-		reset = newReset;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StatemachinePackage.STATE_MACHINE__RESET, oldReset, newReset);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setReset(Reset newReset) {
-		if (newReset != reset) {
-			NotificationChain msgs = null;
-			if (reset != null)
-				msgs = ((InternalEObject)reset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - StatemachinePackage.STATE_MACHINE__RESET, null, msgs);
-			if (newReset != null)
-				msgs = ((InternalEObject)newReset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - StatemachinePackage.STATE_MACHINE__RESET, null, msgs);
-			msgs = basicSetReset(newReset, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatemachinePackage.STATE_MACHINE__RESET, newReset, newReset));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case StatemachinePackage.STATE_MACHINE__STATES:
 				return ((InternalEList<?>)getStates()).basicRemove(otherEnd, msgs);
 			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
 				return ((InternalEList<?>)getTranstions()).basicRemove(otherEnd, msgs);
-			case StatemachinePackage.STATE_MACHINE__RESET:
-				return basicSetReset(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -236,8 +177,6 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 				return getName();
 			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
 				return getTranstions();
-			case StatemachinePackage.STATE_MACHINE__RESET:
-				return getReset();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -262,9 +201,6 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 				getTranstions().clear();
 				getTranstions().addAll((Collection<? extends Transition>)newValue);
 				return;
-			case StatemachinePackage.STATE_MACHINE__RESET:
-				setReset((Reset)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -286,9 +222,6 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
 				getTranstions().clear();
 				return;
-			case StatemachinePackage.STATE_MACHINE__RESET:
-				setReset((Reset)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -307,8 +240,6 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
 				return transtions != null && !transtions.isEmpty();
-			case StatemachinePackage.STATE_MACHINE__RESET:
-				return reset != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -6,7 +6,7 @@
     <semanticResources>model/StateMachine.statemachine</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_vLjPgJtjEe6peePANVCSOw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/it.univaq.disim.usecases.statemachine.odesign/description/odesign.odesign#//@ownedViewpoints[name='statemachine']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_v-gWcJtjEe6peePANVCSOw" name="StatemachineDD" repPath="#_v-NbgJtjEe6peePANVCSOw" changeId="1702661222082">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_v-gWcJtjEe6peePANVCSOw" name="StatemachineDD" repPath="#_v-NbgJtjEe6peePANVCSOw" changeId="1702661733938">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/it.univaq.disim.usecases.statemachine.odesign/description/odesign.odesign#//@ownedViewpoints[name='statemachine']/@ownedRepresentations[name='statemachineDD']"/>
         <target xmi:type="sm:StateMachine" href="model/StateMachine.statemachine#/"/>
       </ownedRepresentationDescriptors>
@@ -15,23 +15,6 @@
   <diagram:DSemanticDiagram uid="_v-NbgJtjEe6peePANVCSOw">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_v-9CYJtjEe6peePANVCSOw" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_v-9pcJtjEe6peePANVCSOw" type="Sirius" element="_v-NbgJtjEe6peePANVCSOw" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_NKMl0JtqEe63_-k2szzJ4Q" type="2003" element="_NKAYkptqEe63_-k2szzJ4Q">
-          <children xmi:type="notation:Node" xmi:id="_NKQQMJtqEe63_-k2szzJ4Q" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_NKQQMZtqEe63_-k2szzJ4Q" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_VACgsJtqEe63_-k2szzJ4Q" type="3010" element="_U-2085tqEe63_-k2szzJ4Q">
-              <styles xmi:type="notation:FontStyle" xmi:id="_VACgsZtqEe63_-k2szzJ4Q" fontName=".AppleSystemUIFont" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_VACgsptqEe63_-k2szzJ4Q"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_bNPp0JtqEe63_-k2szzJ4Q" type="3010" element="_bNN0o5tqEe63_-k2szzJ4Q">
-              <styles xmi:type="notation:FontStyle" xmi:id="_bNPp0ZtqEe63_-k2szzJ4Q" fontName=".AppleSystemUIFont" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_bNPp0ptqEe63_-k2szzJ4Q"/>
-            </children>
-            <styles xmi:type="notation:SortingStyle" xmi:id="_NKQQMptqEe63_-k2szzJ4Q"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_NKQQM5tqEe63_-k2szzJ4Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_NKMl0ZtqEe63_-k2szzJ4Q" fontName=".AppleSystemUIFont" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NKMl0ptqEe63_-k2szzJ4Q" x="106" y="304"/>
-        </children>
         <children xmi:type="notation:Node" xmi:id="_2SOWQJtuEe6hFqCMPOX-sg" type="2003" element="_2Qc0oJtuEe6hFqCMPOX-sg">
           <children xmi:type="notation:Node" xmi:id="_2STOwJtuEe6hFqCMPOX-sg" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_2ST10JtuEe6hFqCMPOX-sg" type="7004">
@@ -190,55 +173,12 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2S99IJtuEe6hFqCMPOX-sg" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2S99IZtuEe6hFqCMPOX-sg" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_2S99IptuEe6hFqCMPOX-sg" type="4001" element="_2Qt6ZJtuEe6hFqCMPOX-sg" source="_NKMl0JtqEe63_-k2szzJ4Q" target="_2SOWQJtuEe6hFqCMPOX-sg">
-          <children xmi:type="notation:Node" xmi:id="_2S99JptuEe6hFqCMPOX-sg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2S99J5tuEe6hFqCMPOX-sg" x="12" y="4"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_2S99KJtuEe6hFqCMPOX-sg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2S99KZtuEe6hFqCMPOX-sg" x="-16" y="-5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_2S-kMJtuEe6hFqCMPOX-sg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2S-kMZtuEe6hFqCMPOX-sg" x="-13" y="-6"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_2S99I5tuEe6hFqCMPOX-sg"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_2S99JJtuEe6hFqCMPOX-sg" fontName=".AppleSystemUIFont" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2S99JZtuEe6hFqCMPOX-sg" points="[46, 23, -114, -59]$[160, 82, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2S-kMptuEe6hFqCMPOX-sg" id="(0.5106382978723404,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2S-kM5tuEe6hFqCMPOX-sg" id="(0.5087719298245614,1.0)"/>
-        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_wBPhYJtjEe6peePANVCSOw" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_wBQIcJtjEe6peePANVCSOw"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_NKAYkptqEe63_-k2szzJ4Q" name="reset1" outgoingEdges="_2Qt6ZJtuEe6hFqCMPOX-sg">
-      <target xmi:type="sm:Reset" href="model/StateMachine.statemachine#//@reset"/>
-      <semanticElements xmi:type="sm:Reset" href="model/StateMachine.statemachine#//@reset"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_NKA_oJtqEe63_-k2szzJ4Q" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/it.univaq.disim.usecases.statemachine.odesign/description/odesign.odesign#//@ownedViewpoints[name='statemachine']/@ownedRepresentations[name='statemachineDD']/@defaultLayer/@containerMappings[name='reset']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/it.univaq.disim.usecases.statemachine.odesign/description/odesign.odesign#//@ownedViewpoints[name='statemachine']/@ownedRepresentations[name='statemachineDD']/@defaultLayer/@containerMappings[name='reset']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_U-2085tqEe63_-k2szzJ4Q" name="drawerOpened">
-        <target xmi:type="sm:Event" href="model/StateMachine.statemachine#//@transtions.2/@trigger"/>
-        <semanticElements xmi:type="sm:Event" href="model/StateMachine.statemachine#//@transtions.2/@trigger"/>
-        <ownedStyle xmi:type="diagram:Square" uid="_U-3cAJtqEe63_-k2szzJ4Q" labelSize="12" showIcon="false" labelPosition="node" color="255,255,255">
-          <description xmi:type="style:SquareDescription" href="platform:/resource/it.univaq.disim.usecases.statemachine.odesign/description/odesign.odesign#//@ownedViewpoints[name='statemachine']/@ownedRepresentations[name='statemachineDD']/@defaultLayer/@containerMappings[name='reset']/@subNodeMappings[name='resetAction']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/it.univaq.disim.usecases.statemachine.odesign/description/odesign.odesign#//@ownedViewpoints[name='statemachine']/@ownedRepresentations[name='statemachineDD']/@defaultLayer/@containerMappings[name='reset']/@subNodeMappings[name='resetAction']"/>
-      </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_bNN0o5tqEe63_-k2szzJ4Q" name="lightOn">
-        <target xmi:type="sm:Event" href="model/StateMachine.statemachine#//@transtions.3/@trigger"/>
-        <semanticElements xmi:type="sm:Event" href="model/StateMachine.statemachine#//@transtions.3/@trigger"/>
-        <ownedStyle xmi:type="diagram:Square" uid="_bNN0pJtqEe63_-k2szzJ4Q" labelSize="12" showIcon="false" labelPosition="node" color="255,255,255">
-          <description xmi:type="style:SquareDescription" href="platform:/resource/it.univaq.disim.usecases.statemachine.odesign/description/odesign.odesign#//@ownedViewpoints[name='statemachine']/@ownedRepresentations[name='statemachineDD']/@defaultLayer/@containerMappings[name='reset']/@subNodeMappings[name='resetAction']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/it.univaq.disim.usecases.statemachine.odesign/description/odesign.odesign#//@ownedViewpoints[name='statemachine']/@ownedRepresentations[name='statemachineDD']/@defaultLayer/@containerMappings[name='reset']/@subNodeMappings[name='resetAction']"/>
-      </ownedElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_2Qc0oJtuEe6hFqCMPOX-sg" name="idle" outgoingEdges="_2QnMsJtuEe6hFqCMPOX-sg" incomingEdges="_2QtTUJtuEe6hFqCMPOX-sg _2Qt6ZJtuEe6hFqCMPOX-sg">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_2Qc0oJtuEe6hFqCMPOX-sg" name="idle" outgoingEdges="_2QnMsJtuEe6hFqCMPOX-sg" incomingEdges="_2QtTUJtuEe6hFqCMPOX-sg">
       <target xmi:type="sm:Situation" href="model/StateMachine.statemachine#//@states.0"/>
       <semanticElements xmi:type="sm:Situation" href="model/StateMachine.statemachine#//@states.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -378,14 +318,6 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_2Qt6YZtuEe6hFqCMPOX-sg" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/it.univaq.disim.usecases.statemachine.odesign/description/odesign.odesign#//@ownedViewpoints[name='statemachine']/@ownedRepresentations[name='statemachineDD']/@defaultLayer/@edgeMappings[name='transitionEdge']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_2Qt6ZJtuEe6hFqCMPOX-sg" sourceNode="_NKAYkptqEe63_-k2szzJ4Q" targetNode="_2Qc0oJtuEe6hFqCMPOX-sg">
-      <target xmi:type="sm:Reset" href="model/StateMachine.statemachine#//@reset"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_2QuhcJtuEe6hFqCMPOX-sg" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/it.univaq.disim.usecases.statemachine.odesign/description/odesign.odesign#//@ownedViewpoints[name='statemachine']/@ownedRepresentations[name='statemachineDD']/@defaultLayer/@edgeMappings[name='resetTransition']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_2QuhcZtuEe6hFqCMPOX-sg" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/it.univaq.disim.usecases.statemachine.odesign/description/odesign.odesign#//@ownedViewpoints[name='statemachine']/@ownedRepresentations[name='statemachineDD']/@defaultLayer/@edgeMappings[name='resetTransition']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/it.univaq.disim.usecases.statemachine.odesign/description/odesign.odesign#//@ownedViewpoints[name='statemachine']/@ownedRepresentations[name='statemachineDD']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_v-YaoJtjEe6peePANVCSOw"/>
