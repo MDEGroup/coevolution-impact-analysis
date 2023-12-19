@@ -13,6 +13,7 @@ import statemachine.AbstractEvent;
 import statemachine.Command;
 import statemachine.Event;
 import statemachine.Situation;
+import statemachine.Start;
 import statemachine.StateMachine;
 import statemachine.StatemachineFactory;
 import statemachine.StatemachinePackage;
@@ -66,6 +67,13 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 	 * @generated
 	 */
 	private EClass eventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass startEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -155,6 +163,16 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 	@Override
 	public EAttribute getStateMachine_Name() {
 		return (EAttribute)stateMachineEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getStateMachine_Start() {
+		return (EReference)stateMachineEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -283,6 +301,16 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 	 * @generated
 	 */
 	@Override
+	public EClass getStart() {
+		return startEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public StatemachineFactory getStatemachineFactory() {
 		return (StatemachineFactory)getEFactoryInstance();
 	}
@@ -309,6 +337,7 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 		stateMachineEClass = createEClass(STATE_MACHINE);
 		createEReference(stateMachineEClass, STATE_MACHINE__STATES);
 		createEAttribute(stateMachineEClass, STATE_MACHINE__NAME);
+		createEReference(stateMachineEClass, STATE_MACHINE__START);
 
 		situationEClass = createEClass(SITUATION);
 		createEAttribute(situationEClass, SITUATION__NAME);
@@ -326,6 +355,8 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 		commandEClass = createEClass(COMMAND);
 
 		eventEClass = createEClass(EVENT);
+
+		startEClass = createEClass(START);
 	}
 
 	/**
@@ -358,11 +389,13 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 		// Add supertypes to classes
 		commandEClass.getESuperTypes().add(this.getAbstractEvent());
 		eventEClass.getESuperTypes().add(this.getAbstractEvent());
+		startEClass.getESuperTypes().add(this.getSituation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(stateMachineEClass, StateMachine.class, "StateMachine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStateMachine_States(), this.getSituation(), null, "states", null, 0, -1, StateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStateMachine_Name(), ecorePackage.getEString(), "name", null, 0, 1, StateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStateMachine_Start(), this.getStart(), null, "start", null, 1, 1, StateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(situationEClass, Situation.class, "Situation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSituation_Name(), ecorePackage.getEString(), "name", null, 1, 1, Situation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -380,6 +413,8 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 		initEClass(commandEClass, Command.class, "Command", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(startEClass, Start.class, "Start", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

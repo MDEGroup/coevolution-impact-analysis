@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link statemachine.StateMachine#getStates <em>States</em>}</li>
  *   <li>{@link statemachine.StateMachine#getName <em>Name</em>}</li>
+ *   <li>{@link statemachine.StateMachine#getStart <em>Start</em>}</li>
  * </ul>
  *
  * @see statemachine.StatemachinePackage#getStateMachine()
@@ -57,5 +58,27 @@ public interface StateMachine extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Start</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Start</em>' containment reference.
+	 * @see #setStart(Start)
+	 * @see statemachine.StatemachinePackage#getStateMachine_Start()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Start getStart();
+
+	/**
+	 * Sets the value of the '{@link statemachine.StateMachine#getStart <em>Start</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Start</em>' containment reference.
+	 * @see #getStart()
+	 * @generated
+	 */
+	void setStart(Start value);
 
 } // StateMachine

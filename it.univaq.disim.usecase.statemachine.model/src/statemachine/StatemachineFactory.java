@@ -67,6 +67,15 @@ public interface StatemachineFactory extends EFactory {
 	Event createEvent();
 
 	/**
+	 * Returns a new object of class '<em>Start</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Start</em>'.
+	 * @generated
+	 */
+	Start createStart();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

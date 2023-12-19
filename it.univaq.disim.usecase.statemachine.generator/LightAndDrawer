@@ -1,14 +1,14 @@
-event: panelClosed., "PNCL"
+event: drawerOpened., "D2OP"
 event: lightOn., "L1ON"
 event: drawreOpened., "D2OP"
+event: panelClosed., "PNCL"
 event: lightOn., "L1ON"
 event: panelClosed., ""
-event: drawerOpened., "D2OP"
 
-command: unlockDoor., "D1UL"
 command: lookedPanel., "PNLK"
-command: unlockedPanel., "PNUL"
+command: unlockDoor., "D1UL"
 command: lockDoor., "D1LK"
+command: unlockedPanel., "PNUL"
 
 
 state :idle do

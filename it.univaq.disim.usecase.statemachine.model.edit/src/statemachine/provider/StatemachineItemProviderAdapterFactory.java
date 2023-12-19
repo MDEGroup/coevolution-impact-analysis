@@ -187,6 +187,29 @@ public class StatemachineItemProviderAdapterFactory extends StatemachineAdapterF
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link statemachine.Start} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StartItemProvider startItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link statemachine.Start}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStartAdapter() {
+		if (startItemProvider == null) {
+			startItemProvider = new StartItemProvider(this);
+		}
+
+		return startItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -296,6 +319,7 @@ public class StatemachineItemProviderAdapterFactory extends StatemachineAdapterF
 		if (transitionItemProvider != null) transitionItemProvider.dispose();
 		if (commandItemProvider != null) commandItemProvider.dispose();
 		if (eventItemProvider != null) eventItemProvider.dispose();
+		if (startItemProvider != null) startItemProvider.dispose();
 	}
 
 }

@@ -85,13 +85,22 @@ public interface StatemachinePackage extends EPackage {
 	int STATE_MACHINE__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Start</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE_MACHINE__START = 2;
+
+	/**
 	 * The number of structural features of the '<em>State Machine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_MACHINE_FEATURE_COUNT = 2;
+	int STATE_MACHINE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>State Machine</em>' class.
@@ -341,6 +350,61 @@ public interface StatemachinePackage extends EPackage {
 	 */
 	int EVENT_OPERATION_COUNT = ABSTRACT_EVENT_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link statemachine.impl.StartImpl <em>Start</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see statemachine.impl.StartImpl
+	 * @see statemachine.impl.StatemachinePackageImpl#getStart()
+	 * @generated
+	 */
+	int START = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START__NAME = SITUATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START__ACTIONS = SITUATION__ACTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Transtions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START__TRANSTIONS = SITUATION__TRANSTIONS;
+
+	/**
+	 * The number of structural features of the '<em>Start</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_FEATURE_COUNT = SITUATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Start</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_OPERATION_COUNT = SITUATION_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link statemachine.StateMachine <em>State Machine</em>}'.
@@ -373,6 +437,17 @@ public interface StatemachinePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getStateMachine_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link statemachine.StateMachine#getStart <em>Start</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Start</em>'.
+	 * @see statemachine.StateMachine#getStart()
+	 * @see #getStateMachine()
+	 * @generated
+	 */
+	EReference getStateMachine_Start();
 
 	/**
 	 * Returns the meta object for class '{@link statemachine.Situation <em>Situation</em>}'.
@@ -502,6 +577,16 @@ public interface StatemachinePackage extends EPackage {
 	EClass getEvent();
 
 	/**
+	 * Returns the meta object for class '{@link statemachine.Start <em>Start</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Start</em>'.
+	 * @see statemachine.Start
+	 * @generated
+	 */
+	EClass getStart();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -549,6 +634,14 @@ public interface StatemachinePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute STATE_MACHINE__NAME = eINSTANCE.getStateMachine_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Start</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE_MACHINE__START = eINSTANCE.getStateMachine_Start();
 
 		/**
 		 * The meta object literal for the '{@link statemachine.impl.SituationImpl <em>Situation</em>}' class.
@@ -655,6 +748,16 @@ public interface StatemachinePackage extends EPackage {
 		 * @generated
 		 */
 		EClass EVENT = eINSTANCE.getEvent();
+
+		/**
+		 * The meta object literal for the '{@link statemachine.impl.StartImpl <em>Start</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see statemachine.impl.StartImpl
+		 * @see statemachine.impl.StatemachinePackageImpl#getStart()
+		 * @generated
+		 */
+		EClass START = eINSTANCE.getStart();
 
 	}
 

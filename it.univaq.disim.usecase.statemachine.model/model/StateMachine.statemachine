@@ -61,4 +61,8 @@
           name="panelClosed"/>
     </transtions>
   </states>
+  <start name="Start">
+    <transtions
+        target="//@states.0"/>
+  </start>
 </sm:StateMachine>
