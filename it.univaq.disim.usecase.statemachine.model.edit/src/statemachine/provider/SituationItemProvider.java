@@ -103,6 +103,7 @@ public class SituationItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(StatemachinePackage.Literals.SITUATION__ACTIONS);
+			childrenFeatures.add(StatemachinePackage.Literals.SITUATION__TRANSTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -162,6 +163,7 @@ public class SituationItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case StatemachinePackage.SITUATION__ACTIONS:
+			case StatemachinePackage.SITUATION__TRANSTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -183,6 +185,11 @@ public class SituationItemProvider
 			(createChildParameter
 				(StatemachinePackage.Literals.SITUATION__ACTIONS,
 				 StatemachineFactory.eINSTANCE.createCommand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StatemachinePackage.Literals.SITUATION__TRANSTIONS,
+				 StatemachineFactory.eINSTANCE.createTransition()));
 	}
 
 	/**

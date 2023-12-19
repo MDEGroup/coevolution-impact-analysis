@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import statemachine.Situation;
 import statemachine.StateMachine;
 import statemachine.StatemachinePackage;
-import statemachine.Transition;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +32,6 @@ import statemachine.Transition;
  * <ul>
  *   <li>{@link statemachine.impl.StateMachineImpl#getStates <em>States</em>}</li>
  *   <li>{@link statemachine.impl.StateMachineImpl#getName <em>Name</em>}</li>
- *   <li>{@link statemachine.impl.StateMachineImpl#getTranstions <em>Transtions</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,16 +66,6 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getTranstions() <em>Transtions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTranstions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Transition> transtions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,25 +128,10 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 	 * @generated
 	 */
 	@Override
-	public EList<Transition> getTranstions() {
-		if (transtions == null) {
-			transtions = new EObjectContainmentEList<Transition>(Transition.class, this, StatemachinePackage.STATE_MACHINE__TRANSTIONS);
-		}
-		return transtions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case StatemachinePackage.STATE_MACHINE__STATES:
 				return ((InternalEList<?>)getStates()).basicRemove(otherEnd, msgs);
-			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
-				return ((InternalEList<?>)getTranstions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -175,8 +148,6 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 				return getStates();
 			case StatemachinePackage.STATE_MACHINE__NAME:
 				return getName();
-			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
-				return getTranstions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -197,10 +168,6 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 			case StatemachinePackage.STATE_MACHINE__NAME:
 				setName((String)newValue);
 				return;
-			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
-				getTranstions().clear();
-				getTranstions().addAll((Collection<? extends Transition>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -219,9 +186,6 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 			case StatemachinePackage.STATE_MACHINE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
-				getTranstions().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -238,8 +202,6 @@ public class StateMachineImpl extends MinimalEObjectImpl.Container implements St
 				return states != null && !states.isEmpty();
 			case StatemachinePackage.STATE_MACHINE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
-				return transtions != null && !transtions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

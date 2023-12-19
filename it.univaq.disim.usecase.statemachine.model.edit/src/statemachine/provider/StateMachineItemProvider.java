@@ -103,7 +103,6 @@ public class StateMachineItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(StatemachinePackage.Literals.STATE_MACHINE__STATES);
-			childrenFeatures.add(StatemachinePackage.Literals.STATE_MACHINE__TRANSTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -163,7 +162,6 @@ public class StateMachineItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case StatemachinePackage.STATE_MACHINE__STATES:
-			case StatemachinePackage.STATE_MACHINE__TRANSTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -185,11 +183,6 @@ public class StateMachineItemProvider
 			(createChildParameter
 				(StatemachinePackage.Literals.STATE_MACHINE__STATES,
 				 StatemachineFactory.eINSTANCE.createSituation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(StatemachinePackage.Literals.STATE_MACHINE__TRANSTIONS,
-				 StatemachineFactory.eINSTANCE.createTransition()));
 	}
 
 	/**

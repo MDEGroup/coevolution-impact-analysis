@@ -24,7 +24,6 @@ import statemachine.Transition;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link statemachine.impl.TransitionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link statemachine.impl.TransitionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link statemachine.impl.TransitionImpl#getTrigger <em>Trigger</em>}</li>
  * </ul>
@@ -32,16 +31,6 @@ import statemachine.Transition;
  * @generated
  */
 public class TransitionImpl extends MinimalEObjectImpl.Container implements Transition {
-	/**
-	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSource()
-	 * @generated
-	 * @ordered
-	 */
-	protected Situation source;
-
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -79,46 +68,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	protected EClass eStaticClass() {
 		return StatemachinePackage.Literals.TRANSITION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Situation getSource() {
-		if (source != null && source.eIsProxy()) {
-			InternalEObject oldSource = (InternalEObject)source;
-			source = (Situation)eResolveProxy(oldSource);
-			if (source != oldSource) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatemachinePackage.TRANSITION__SOURCE, oldSource, source));
-			}
-		}
-		return source;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Situation basicGetSource() {
-		return source;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setSource(Situation newSource) {
-		Situation oldSource = source;
-		source = newSource;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatemachinePackage.TRANSITION__SOURCE, oldSource, source));
 	}
 
 	/**
@@ -228,9 +177,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatemachinePackage.TRANSITION__SOURCE:
-				if (resolve) return getSource();
-				return basicGetSource();
 			case StatemachinePackage.TRANSITION__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
@@ -248,9 +194,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatemachinePackage.TRANSITION__SOURCE:
-				setSource((Situation)newValue);
-				return;
 			case StatemachinePackage.TRANSITION__TARGET:
 				setTarget((Situation)newValue);
 				return;
@@ -269,9 +212,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatemachinePackage.TRANSITION__SOURCE:
-				setSource((Situation)null);
-				return;
 			case StatemachinePackage.TRANSITION__TARGET:
 				setTarget((Situation)null);
 				return;
@@ -290,8 +230,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatemachinePackage.TRANSITION__SOURCE:
-				return source != null;
 			case StatemachinePackage.TRANSITION__TARGET:
 				return target != null;
 			case StatemachinePackage.TRANSITION__TRIGGER:

@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link statemachine.Transition#getSource <em>Source</em>}</li>
  *   <li>{@link statemachine.Transition#getTarget <em>Target</em>}</li>
  *   <li>{@link statemachine.Transition#getTrigger <em>Trigger</em>}</li>
  * </ul>
@@ -23,28 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Transition extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(Situation)
-	 * @see statemachine.StatemachinePackage#getTransition_Source()
-	 * @model required="true"
-	 * @generated
-	 */
-	Situation getSource();
-
-	/**
-	 * Sets the value of the '{@link statemachine.Transition#getSource <em>Source</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Source</em>' reference.
-	 * @see #getSource()
-	 * @generated
-	 */
-	void setSource(Situation value);
-
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->

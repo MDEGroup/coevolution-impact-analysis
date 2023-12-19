@@ -85,22 +85,13 @@ public interface StatemachinePackage extends EPackage {
 	int STATE_MACHINE__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Transtions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_MACHINE__TRANSTIONS = 2;
-
-	/**
 	 * The number of structural features of the '<em>State Machine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_MACHINE_FEATURE_COUNT = 3;
+	int STATE_MACHINE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>State Machine</em>' class.
@@ -140,13 +131,22 @@ public interface StatemachinePackage extends EPackage {
 	int SITUATION__ACTIONS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Transtions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SITUATION__TRANSTIONS = 2;
+
+	/**
 	 * The number of structural features of the '<em>Situation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SITUATION_FEATURE_COUNT = 2;
+	int SITUATION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Situation</em>' class.
@@ -168,22 +168,13 @@ public interface StatemachinePackage extends EPackage {
 	int TRANSITION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__SOURCE = 0;
-
-	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__TARGET = 1;
+	int TRANSITION__TARGET = 0;
 
 	/**
 	 * The feature id for the '<em><b>Trigger</b></em>' containment reference.
@@ -192,7 +183,7 @@ public interface StatemachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__TRIGGER = 2;
+	int TRANSITION__TRIGGER = 1;
 
 	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
@@ -201,7 +192,7 @@ public interface StatemachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_FEATURE_COUNT = 3;
+	int TRANSITION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Transition</em>' class.
@@ -384,17 +375,6 @@ public interface StatemachinePackage extends EPackage {
 	EAttribute getStateMachine_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link statemachine.StateMachine#getTranstions <em>Transtions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Transtions</em>'.
-	 * @see statemachine.StateMachine#getTranstions()
-	 * @see #getStateMachine()
-	 * @generated
-	 */
-	EReference getStateMachine_Transtions();
-
-	/**
 	 * Returns the meta object for class '{@link statemachine.Situation <em>Situation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -427,6 +407,17 @@ public interface StatemachinePackage extends EPackage {
 	EReference getSituation_Actions();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link statemachine.Situation#getTranstions <em>Transtions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Transtions</em>'.
+	 * @see statemachine.Situation#getTranstions()
+	 * @see #getSituation()
+	 * @generated
+	 */
+	EReference getSituation_Transtions();
+
+	/**
 	 * Returns the meta object for class '{@link statemachine.Transition <em>Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -435,17 +426,6 @@ public interface StatemachinePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTransition();
-
-	/**
-	 * Returns the meta object for the reference '{@link statemachine.Transition#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see statemachine.Transition#getSource()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EReference getTransition_Source();
 
 	/**
 	 * Returns the meta object for the reference '{@link statemachine.Transition#getTarget <em>Target</em>}'.
@@ -571,14 +551,6 @@ public interface StatemachinePackage extends EPackage {
 		EAttribute STATE_MACHINE__NAME = eINSTANCE.getStateMachine_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Transtions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE_MACHINE__TRANSTIONS = eINSTANCE.getStateMachine_Transtions();
-
-		/**
 		 * The meta object literal for the '{@link statemachine.impl.SituationImpl <em>Situation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -605,6 +577,14 @@ public interface StatemachinePackage extends EPackage {
 		EReference SITUATION__ACTIONS = eINSTANCE.getSituation_Actions();
 
 		/**
+		 * The meta object literal for the '<em><b>Transtions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SITUATION__TRANSTIONS = eINSTANCE.getSituation_Transtions();
+
+		/**
 		 * The meta object literal for the '{@link statemachine.impl.TransitionImpl <em>Transition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -613,14 +593,6 @@ public interface StatemachinePackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRANSITION = eINSTANCE.getTransition();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSITION__SOURCE = eINSTANCE.getTransition_Source();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.

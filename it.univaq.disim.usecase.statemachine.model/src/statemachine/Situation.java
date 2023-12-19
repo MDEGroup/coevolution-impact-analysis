@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link statemachine.Situation#getName <em>Name</em>}</li>
  *   <li>{@link statemachine.Situation#getActions <em>Actions</em>}</li>
+ *   <li>{@link statemachine.Situation#getTranstions <em>Transtions</em>}</li>
  * </ul>
  *
  * @see statemachine.StatemachinePackage#getSituation()
@@ -57,5 +58,17 @@ public interface Situation extends EObject {
 	 * @generated
 	 */
 	EList<Command> getActions();
+
+	/**
+	 * Returns the value of the '<em><b>Transtions</b></em>' containment reference list.
+	 * The list contents are of type {@link statemachine.Transition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Transtions</em>' containment reference list.
+	 * @see statemachine.StatemachinePackage#getSituation_Transtions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Transition> getTranstions();
 
 } // Situation

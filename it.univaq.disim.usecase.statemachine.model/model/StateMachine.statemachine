@@ -1,32 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sm:StateMachine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sm="http://it.univaq.disim.sirius.usecases/statemachine" name="LightAndDrawer">
+<sm:StateMachine
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:sm="http://it.univaq.disim.sirius.usecases/statemachine"
+    name="LightAndDrawer">
   <states name="idle">
-    <actions name="unlockDoor" code="D1UL"/>
-    <actions name="lookedPanel" code="PNLK"/>
+    <actions
+        name="unlockDoor"
+        code="D1UL"/>
+    <actions
+        name="lookedPanel"
+        code="PNLK"/>
+    <transtions
+        target="//@states.1">
+      <trigger
+          name="panelClosed"
+          code="PNCL"/>
+    </transtions>
   </states>
-  <states name="active"/>
-  <states name="waitingForDrawer"/>
-  <states name="waitingForLight"/>
+  <states name="active">
+    <transtions
+        target="//@states.2">
+      <trigger
+          name="lightOn"
+          code="L1ON"/>
+    </transtions>
+    <transtions
+        target="//@states.3">
+      <trigger
+          name="drawerOpened"
+          code="D2OP"/>
+    </transtions>
+  </states>
+  <states name="waitingForDrawer">
+    <transtions
+        target="//@states.4">
+      <trigger
+          name="lightOn"
+          code="L1ON"/>
+    </transtions>
+  </states>
+  <states name="waitingForLight">
+    <transtions
+        target="//@states.4">
+      <trigger
+          name="drawreOpened"
+          code="D2OP"/>
+    </transtions>
+  </states>
   <states name="unlockedPanel">
-    <actions name="unlockedPanel" code="PNUL"/>
-    <actions name="lockDoor" code="D1LK"/>
+    <actions
+        name="unlockedPanel"
+        code="PNUL"/>
+    <actions
+        name="lockDoor"
+        code="D1LK"/>
+    <transtions
+        target="//@states.0">
+      <trigger
+          name="panelClosed"/>
+    </transtions>
   </states>
-  <transtions source="//@states.0" target="//@states.1">
-    <trigger name="panelClosed" code="PNCL"/>
-  </transtions>
-  <transtions source="//@states.1" target="//@states.2">
-    <trigger name="lightOn" code="L1ON"/>
-  </transtions>
-  <transtions source="//@states.1" target="//@states.3">
-    <trigger name="drawerOpened" code="D2OP"/>
-  </transtions>
-  <transtions source="//@states.3" target="//@states.4">
-    <trigger name="lightOn" code="L1ON"/>
-  </transtions>
-  <transtions source="//@states.2" target="//@states.4">
-    <trigger name="drawreOpened" code="D2OP"/>
-  </transtions>
-  <transtions source="//@states.4" target="//@states.0">
-    <trigger name="panelClosed"/>
-  </transtions>
 </sm:StateMachine>

@@ -16,7 +16,7 @@ command: [it.name/]., "[it.code/]"
 [for (it : Situation | aStateMachine.states)]
 state :[it.name/] do
 	actions: [for (action : Command | it.actions) separator (',')]:[action.name/][/for]
-	transition [for (action : Transition | Transition.allInstances()->select(x | x.source = self)) separator (',')]:[action.trigger.name/] => [action.target.name/][/for]
+	transition [for (action : Transition | it.transtions) separator (',')]:[action.trigger.name/] => [action.target.name/][/for]
 end
 
 [/for]
